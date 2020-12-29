@@ -1,11 +1,12 @@
 # Project-Miro
 
-#### This is an abandoned discord bot project. I had its code so thought to make it opensource. It uses quick.db which is based on SQL. 
+#### This is an abandoned discord bot project. I had its code so thought to make it opensource. It uses quick.db which is based on SQL. There might be many bugs in it and the music system is not complete.
 
 ## I might work on this project in future and make it active.
 ## For support join [CTK's Server](www.withwin.in/dbd) or open a issue and i will fix it as soon as possible.
 ## And if you know how to fix a flaw just open a pull request.
 
+## To Install Packages
 ### NPM
 ```ssh
 npm install
