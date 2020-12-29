@@ -1,0 +1,47 @@
+{
+  "name": "project-miro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cls && echo Starting Project Miro please stand by! && node .",
+    "dev": "cls && echo So you're a dev huh? FIX THESE ERRORS. Please stand by! && nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slimsy135/Project-Miro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slimsy135/Project-Miro/issues"
+  },
+  "homepage": "https://github.com/slimsy135/Project-Miro#readme",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.2",
+    "animequote": "^1.1.1",
+    "ascii-table": "0.0.9",
+    "canvas-senpai": "^0.1.6",
+    "common-tags": "^1.8.0",
+    "discord.js": "^12.3.1",
+    "discord.js-pagination": "^1.0.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "ffmpeg-static": "^4.2.7",
+    "figlet": "^1.5.0",
+    "got": "^11.6.0",
+    "kitsu.js": "^2.0.0",
+    "mathjs": "^7.2.0",
+    "moment": "^2.27.0",
+    "mongoose": "^5.10.4",
+    "ncp": "^2.0.0",
+    "parse-ms": "^2.1.0",
+    "quick.db": "^7.1.2",
+    "quickdb": "^1.0.5",
+    "random-puppy": "^1.1.0",
+    "simple-youtube-api": "^5.2.1",
+    "slot-machine": "^2.1.0",
+    "weather-js": "^2.0.0",
+    "ytdl-core": "^3.2.2"
+  }
+}
