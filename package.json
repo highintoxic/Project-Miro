@@ -4,15 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cls && echo Starting Project Miro please stand by! && node .",
-    "dev": "cls && echo So you're a dev huh? FIX THESE ERRORS. Please stand by! && nodemon"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/highintoxic/Project-Miro.git"
   },
-  "author": "",
+  "author": "highintoxic",
   "license": "ISC",
+  "maintainers": [
+    "highintoxic" 
+  ],
   "engines": {
     "node": "12.x"
   },
