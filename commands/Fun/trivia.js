@@ -7,7 +7,7 @@ let questions = [
   },
   {
     title: "Is Galaxy cool",
-    options: ["no","yes"],
+    options: ["no", "yes"],
     correct: 2,
   },
   {
@@ -30,7 +30,7 @@ let questions = [
     options: ["The lungs", "the kindey", "the heart", "the brain"],
     correct: 3,
   },
-  
+
   {
     title: "Best NPM package?",
     options: ["int.engine", "ms", "ws", "discord.js"],
@@ -61,10 +61,14 @@ module.exports = {
     try {
       let msgs = await message.channel.awaitMessages(
         (u2) => u2.author.id === message.author.id,
-        { time: 15000, max: 1, errors: ["time"] }
+        {
+          time: 15000,
+          max: 1,
+          errors: ["time"],
+        }
       );
       if (parseInt(msgs.first().content) == q.correct) {
-        db.add()
+        db.add();
         return message.channel.send(`You got it correct!`);
       } else {
         return message.channel.send(`You got it incorrect.`);

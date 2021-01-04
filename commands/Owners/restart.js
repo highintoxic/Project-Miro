@@ -1,22 +1,18 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
-const config = require('../../config.json');
-client.login(config.token);
-
-
+const Discord = require("discord.js");
+const config = require("../../config.json");
 
 module.exports = {
- name: "bt-rst",
- allies: ["restartbot"],
- run: async (client, message, args) => {
- 
- let owners = ["463967336194375701", "559420338052661258", "505606993034215434", "446495631075180564"]
-        if (!message.author.id == owners) {
-            return message.channel.send(`You cannot use this command!`)
-        }
-
-
-
-
+  name: "bt-rst",
+  allies: ["restartbot"],
+  category: "Owner Only",
+  run: async (client, message, args) => {
+    if (!config.owners.includes(message.author.id)) {
+      return message.channel.send(`You cannot use this command!`);
     }
-}
+    await client.destroy();
+    await client.login(config.token);
+    await message.channel.send(
+      new Discord.MessageEmbed().setDescription("Bot has restarted.")
+    );
+  },
+};

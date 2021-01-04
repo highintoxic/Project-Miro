@@ -14,10 +14,10 @@
   "author": "highintoxic",
   "license": "ISC",
   "maintainers": [
-    "highintoxic" 
+    "highintoxic"
   ],
   "engines": {
-    "node": "12.x"
+    "node": "14.x"
   },
   "readme": "https://github.com/highintoxic/Project-Miro#README",
   "bugs": {
@@ -33,7 +33,7 @@
     "discord.js": "^12.3.1",
     "discord.js-pagination": "^1.0.2",
     "dotenv": "^8.2.0",
-    "ffmpeg-static": "^4.2.7",
+    "ffmpeg-static": "^4.2.7",  
     "figlet": "^1.5.0",
     "got": "^11.6.0",
     "kitsu.js": "^2.0.0",

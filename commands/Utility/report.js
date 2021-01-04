@@ -1,9 +1,10 @@
 const { MessageEmbed } = require("discord.js");
-const db = require("quick.db")
+const db = require("quick.db");
 module.exports = {
   name: "report",
   category: "Utility",
-  description: "Report a user of your choice!, Requirments: Needs A Channel With Name *reports* To Work, If There Is No Channel, Reports Wont Work!",
+  description:
+    "Report a user of your choice!, Requirments: Needs A Channel With Name *reports* To Work, If There Is No Channel, Reports Wont Work!",
   usage: "<User mention>",
   run: async (bot, message, args) => {
     if (!message.member.permissions.has("SEND_MESSAGES"))
@@ -21,7 +22,7 @@ module.exports = {
       }
       let Avatar = User.displayAvatarURL();
       let Channel = message.guild.channels.cache.find(
-        (ch) => ch.name === ("reports")
+        (ch) => ch.name === "reports"
       );
       if (!Channel)
         return message.channel.send(
@@ -35,16 +36,36 @@ module.exports = {
         .setColor(`RED`)
         .setThumbnail(Avatar)
         .addFields(
-          { name: "Mod ID", value: `${message.author.id}`, inline: true },
-          
-          { name: "Mod Tag", value: `${message.author.tag}`, inline: true },
-          
-          { name: "Reported ID", value: `${User.id}`, inline: true },
-          
-          { name: "Reported Tag", value: `${User.tag}`, inline: true },
-          
-          { name: "Reason", value: `*${Reason}*`, inline: true },
-          
+          {
+            name: "Mod ID",
+            value: `${message.author.id}`,
+            inline: true,
+          },
+
+          {
+            name: "Mod Tag",
+            value: `${message.author.tag}`,
+            inline: true,
+          },
+
+          {
+            name: "Reported ID",
+            value: `${User.id}`,
+            inline: true,
+          },
+
+          {
+            name: "Reported Tag",
+            value: `${User.tag}`,
+            inline: true,
+          },
+
+          {
+            name: "Reason",
+            value: `*${Reason}*`,
+            inline: true,
+          },
+
           {
             name: "Date (M/D/Y)",
             value: `${new Intl.DateTimeFormat("en-US").format(Date.now())}`,

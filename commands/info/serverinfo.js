@@ -10,15 +10,15 @@ module.exports = {
   usage: "Serverinfo",
   accessableby: "everyone",
   run: async (client, message, args) => {
-
     //Start
 
     const guild = message.guild;
     const Emojis = guild.emojis.cache.size || "No Emoji!";
     const Roles = guild.roles.cache.size || "No Roles!";
     const Members = guild.memberCount;
-    const Humans = guild.members.cache.filter(member => !member.user.bot).size;
-    const Bots = guild.members.cache.filter(member => member.user.bot).size;
+    const Humans = guild.members.cache.filter((member) => !member.user.bot)
+      .size;
+    const Bots = guild.members.cache.filter((member) => member.user.bot).size;
 
     const embed = new MessageEmbed()
       .setTitle(guild.name + " Information!")
@@ -40,6 +40,5 @@ module.exports = {
     message.channel.send(embed);
 
     //End
-    
-  }
+  },
 };

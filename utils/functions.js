@@ -164,7 +164,11 @@ const sendToDev = (message, bot, error) => {
   const filter = (m) => message.author.id === m.author.id;
 
   message.channel
-    .awaitMessages(filter, { time: 600000, max: 1, errors: ["time"] })
+    .awaitMessages(filter, {
+      time: 600000,
+      max: 1,
+      errors: ["time"],
+    })
     .then((messages) => {
       const msg = messages.first();
       if (msg.content === "y") {
